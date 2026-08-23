@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empanadas Rey | Pedidos Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR / HEADER -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#hero">
+        <span class="text-accent">EMPANADAS</span> REY
+      </a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#locations">Sucursales</a></li>
+          <li class="nav-item">
+            <a href="https://wa.me/50600000000?text=Hola,%20quiero%20hacer%20un%20pedido" target="_blank" class="btn btn-accent btn-sm px-4">
+              <i class="bi bi-whatsapp me-1"></i> Pedir por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION DOS COLUMNAS -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+      <div class="hero-texture"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <!-- Columna Izquierda: Texto -->
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <span class="eyebrow-ribbon fade-up d-1">
+              <span class="status-dot"></span> Los Reyes de la Empanada
+            </span>
+            <h1 class="hero-title mb-3 fade-up d-2">Pide pura <br><span class="highlight">sabrosura</span></h1>
+            <p class="hero-description mb-4 fade-up d-3">
+              Disfruta de las mejores empanadas crujientes y recién hechas. Haz tu pedido directo al WhatsApp de tu sucursal favorita al instante.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start fade-up d-4">
+              <a href="#menu" class="btn btn-accent btn-lg">Ver Menú</a>
+              <a href="https://wa.me/50600000000?text=Hola,%20quiero%20hacer%20un%20pedido" target="_blank" class="btn btn-outline-custom btn-lg">
+                <i class="bi bi-whatsapp me-2"></i> Pedir Ahora
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Imagen con borde tipo repulgue + sello -->
+          <div class="col-12 col-lg-6">
+            <div class="hero-img-box position-relative fade-up d-3">
+              <div class="hero-img-frame">
+                <img src="img/Empanada2.jpg" alt="Empanadas Rey" class="hero-clean-img">
+              </div>
+              <div class="stamp-badge">
+                <span>100% Artesanal</span>
+                <span class="stamp-sub">★ Hecha al momento</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">NUESTRO SABOR</span>
+          <h2 class="h1 fw-bold text-white mt-1">Menú Oficial</h2>
+          <p class="text-muted">Escoge tu antojo favorito y haz tu pedido directo al WhatsApp.</p>
+        </div>
+
+        <!-- Categoría 1: Empanadas -->
+        <div class="mb-5">
+          <h3 class="text-accent fw-bold mb-4 border-bottom pb-2">🥟 Empanadas</h3>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-1">Sencilla</h5>
+                <p class="text-muted small mb-3">Un relleno a escoger.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">₡1,500</span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20una%20Empanada%20Sencilla" target="_blank" class="btn btn-sm btn-outline-custom">Pedir</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-1">Arreglada</h5>
+                <p class="text-muted small mb-3">Un relleno a escoger.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">₡1,800</span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20una%20Empanada%20Arreglada" target="_blank" class="btn btn-sm btn-outline-custom">Pedir</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-1">Sencilla + Papas</h5>
+                <p class="text-muted small mb-3">Incluye orden de papas fritas.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">₡2,200</span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20Empanada%20Sencilla%20con%20Papas" target="_blank" class="btn btn-sm btn-outline-custom">Pedir</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-1">Arreglada + Papas</h5>
+                <p class="text-muted small mb-3">Incluye orden de papas fritas.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">₡2,500</span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20Empanada%20Arreglada%20con%20Papas" target="_blank" class="btn btn-sm btn-outline-custom">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 2: Especiales y Tacos -->
+        <div class="mb-5">
+          <h3 class="text-accent fw-bold mb-4 border-bottom pb-2">👑 Especiales y Tacos</h3>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="menu-card h-100 p-4 rounded-4 border-accent">
+                <span class="badge bg-accent-soft text-accent mb-2">Triple Carne</span>
+                <h5 class="text-white fw-bold mb-1">Especial Tres Carnes</h5>
+                <p class="text-muted small mb-3">Carne, pollo y chicharrón (Doble tamaño, tres rellenos).</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">Desde ₡3,800</span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20la%20Especial%20Tres%20Carnes" target="_blank" class="btn btn-sm btn-accent">Pedir</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-1">Súper Taco</h5>
+                <p class="text-muted small mb-3">Súper taco crujiente de la casa.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">₡2,500 <span class="text-muted small fw-normal">/ Con papas ₡3,100</span></span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20un%20Súper%20Taco" target="_blank" class="btn btn-sm btn-outline-custom">Pedir</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-1">Enyucados</h5>
+                <p class="text-muted small mb-3">Enyucado Sencillo (₡1,500) / Arreglado (₡1,800).</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <span class="text-accent fw-bold fs-5">Desde ₡1,500</span>
+                  <a href="https://wa.me/50600000000?text=Hola,%20quiero%20ordenar%20un%20Enyucado" target="_blank" class="btn btn-sm btn-outline-custom">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 3: Bebidas -->
+        <div>
+          <h3 class="text-accent fw-bold mb-4 border-bottom pb-2">🥤 Bebidas y Extras</h3>
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-3">Bebidas Naturales y Gaseosas</h5>
+                <ul class="list-unstyled text-muted small mb-0">
+                  <li class="d-flex justify-content-between py-1 border-bottom border-secondary"><span>Crema</span> <strong class="text-white">₡1,150</strong></li>
+                  <li class="d-flex justify-content-between py-1 border-bottom border-secondary"><span>Horchata</span> <strong class="text-white">₡1,150</strong></li>
+                  <li class="d-flex justify-content-between py-1 border-bottom border-secondary"><span>Refresco Natural</span> <strong class="text-white">₡1,150</strong></li>
+                  <li class="d-flex justify-content-between pt-1"><span>Gaseosas</span> <strong class="text-white">₡900</strong></li>
+                </ul>       
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="menu-card h-100 p-4 rounded-4">
+                <h5 class="text-white fw-bold mb-3">Adicionales</h5>
+                <ul class="list-unstyled text-muted small mb-0">
+                  <li class="d-flex justify-content-between py-1 border-bottom border-secondary"><span>Orden de Papas Sencilla</span> <strong class="text-white">₡1,800</strong></li>
+                  <li class="d-flex justify-content-between py-1 border-bottom border-secondary"><span>Mayonesa / Salsa / Pico de Gallo</span> <strong class="text-white">₡600 c/u</strong></li>
+                  <li class="d-flex justify-content-between pt-1"><span>Repollo adicional</span> <strong class="text-white">₡600</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOCATIONS SECTION -->
+    <section id="locations" class="section-padding bg-darker">
+      <div class="container text-center">
+        <span class="section-label">UBICACIONES</span>
+        <h2 class="h1 fw-bold text-white mt-1 mb-4">Nuestros Locales</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-4">
+            <div class="location-box p-4 rounded-4">
+              <i class="bi bi-geo-alt-fill text-accent fs-2 mb-2"></i>
+              <h5 class="text-white fw-bold">San Francisco</h5>
+              <p class="text-muted small mb-0">San Francisco de Dos Ríos, San José</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="location-box p-4 rounded-4">
+              <i class="bi bi-geo-alt-fill text-accent fs-2 mb-2"></i>
+              <h5 class="text-white fw-bold">San Pedro</h5>
+              <p class="text-muted small mb-0">Cerca de zonas universitarias, San Pedro</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="location-box p-4 rounded-4">
+              <i class="bi bi-geo-alt-fill text-accent fs-2 mb-2"></i>
+              <h5 class="text-white fw-bold">Escazú</h5>
+              <p class="text-muted small mb-0">San Rafael de Escazú</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center border-top border-secondary">
+    <div class="container">
+      <p class="text-muted small mb-0">&copy; 2026 Empanadas Rey &bull; Concepto Landing Page Comercial creado con diseño Mobile-First.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

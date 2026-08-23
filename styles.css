@@ -1,0 +1,284 @@
+:root {
+  --bg-dark: #0f1115;
+  --bg-card: #181c24;
+  --bg-darker: #07080a;
+  --accent: #ffcc00; 
+  --accent-soft: rgba(255, 204, 0, 0.2);
+  --accent-ember: #ff5a36;
+  --font-display: 'Anton', 'Plus Jakarta Sans', sans-serif;
+  --text-primary: #ffffff;
+  --text-muted: #f1f5f9;
+  --border-color: #2b3240;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+p, .text-muted, .small, .hero-description {
+  color: #f1f5f9 !important;
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background-color: rgba(15, 17, 21, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+.custom-navbar .navbar-brand .text-accent {
+  color: var(--accent) !important;
+}
+
+.custom-navbar .nav-link {
+  color: var(--accent) !important;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Textura de fondo sutil: líneas diagonales tipo caja de cartón, casi imperceptible */
+.hero-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  mask-image: radial-gradient(ellipse at 70% 40%, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 70% 40%, black 0%, transparent 70%);
+}
+
+.hero-img-box {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.hero-img-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.16) 0%, rgba(15, 17, 21, 0) 70%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Marco con borde festoneado: evoca el repulgue (pliegue trenzado) de la empanada */
+.hero-img-frame {
+  position: relative;
+  transform: rotate(-4deg);
+  transition: transform 0.4s ease;
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 92%,
+    96% 100%, 92% 92%, 88% 100%, 84% 92%, 80% 100%, 76% 92%,
+    72% 100%, 68% 92%, 64% 100%, 60% 92%, 56% 100%, 52% 92%,
+    48% 100%, 44% 92%, 40% 100%, 36% 92%, 32% 100%, 28% 92%,
+    24% 100%, 20% 92%, 16% 100%, 12% 92%, 8% 100%, 4% 92%, 0% 100%
+  );
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+.hero-img-box:hover .hero-img-frame {
+  transform: rotate(-1deg);
+}
+
+.hero-clean-img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Sello circular: referencia directa al sticker de marca que llevan sus empaques */
+.stamp-badge {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px dashed rgba(255, 204, 0, 0.6);
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.25;
+  padding: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  animation: sway 4s ease-in-out infinite alternate;
+}
+
+.stamp-sub {
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+@keyframes sway {
+  from { transform: rotate(-8deg); }
+  to   { transform: rotate(6deg); }
+}
+
+/* Eyebrow como cinta de esquina en vez de píldora centrada genérica */
+.eyebrow-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  padding: 6px 14px;
+  border-radius: 0 20px 20px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-ember);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.hero-title .highlight {
+  color: var(--accent);
+}
+
+/* Entrada escalonada en CSS puro (no depende de JS) */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 0.7s ease forwards;
+}
+.fade-up.d-1 { animation-delay: 0.05s; }
+.fade-up.d-2 { animation-delay: 0.18s; }
+.fade-up.d-3 { animation-delay: 0.32s; }
+.fade-up.d-4 { animation-delay: 0.46s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; opacity: 1; transform: none; }
+  .stamp-badge { animation: none; }
+}
+
+@media (max-width: 991.98px) {
+  .hero-img-box { margin-top: 2.5rem; }
+  .stamp-badge { width: 92px; height: 92px; font-size: 0.6rem; left: 8px; bottom: -14px; }
+}
+
+/* BUTTONS */
+.btn-accent {
+  background-color: var(--accent);
+  color: #000;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-accent:hover {
+  background-color: #e6b800;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  background: rgba(15, 17, 21, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.btn-outline-custom:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* CARDS */
+.menu-card, .location-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.menu-card:hover, .location-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.bg-darker {
+  background-color: var(--bg-darker);
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-label {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
